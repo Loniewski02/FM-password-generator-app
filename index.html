@@ -15,63 +15,45 @@
 </head>
 
 <body>
-
   <main class="main">
     <div class="app">
       <h2 class="app__heading">Password Generator</h2>
       <div class="app__out">
         <h2 class="app__out-pass">PTx1f5DaFX</h2>
         <span class="app__out-copy-info">copied</span>
-        <img src="./dist/img/icons/icon-copy.svg" alt="" class="app__out-copy">
+        <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg" class="app__out-copy" tabindex="0">
+          <path
+            d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
+            fill="currentColor" />
+        </svg>
       </div>
-
       <div class="app__main">
         <label for="length" class="app__main-length">Character Length<span
-            class="app__main-length-number">10</span></label>
+            class="app__main-length-number">0</span></label>
         <div class="app__main-range">
-          <input type="range" id="length">
+          <input type="range" id="length" value="0" min="0" max="20">
         </div>
 
-
-        <p class="app__main-option"><input type="checkbox">Include Uppercase Letters</p>
-        <p class="app__main-option"><input type="checkbox">Include Lowercase Letters</p>
-        <p class="app__main-option"><input type="checkbox">Include Numbers</p>
-        <p class="app__main-option"><input type="checkbox">Include Symbols</p>
-
+        <label for="upper" class="app__main-option"><input type="checkbox" id="upper">Include Uppercase Letters</label>
+        <label for="lower" class="app__main-option"><input type="checkbox" id="lower">Include Lowercase Letters</label>
+        <label for="numb" class="app__main-option"><input type="checkbox" id="numb">Include Numbers</label>
+        <label for="special" class="app__main-option"><input type="checkbox" id="special">Include Symbols</label>
 
         <div class="app__main-strength">strength
           <div class="app__main-strength-boxes">
-            <span class="app__main-strength-text">medium</span>
+            <span class="app__main-strength-text"></span>
             <div class="app__main-strength-box"></div>
             <div class="app__main-strength-box"></div>
             <div class="app__main-strength-box"></div>
             <div class="app__main-strength-box"></div>
           </div>
         </div>
-
         <button class="app__main-btn">generate <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
           </svg></button>
-
       </div>
     </div>
   </main>
-
-  Password Generator
-
-  P4$5W0rD!
-
-
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
   <script src="./dist/js/main.min.js"></script>
 </body>
 
