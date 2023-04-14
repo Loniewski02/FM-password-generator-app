@@ -23,14 +23,11 @@ body {
 	background-color: $main-bg;
 }
 
-@keyframes animatedCopy {
-	from {
-		top: -10%;
-		opacity: 0;
-	}
-	to {
-		top: 50%;
-		opacity: 1;
+@mixin focusStyles {
+	border: 2px dashed transparent;
+	&:focus {
+		outline: none;
+		border: 2px dashed #4169e1;
 	}
 }
 
@@ -61,6 +58,10 @@ body {
 		&-pass {
 			color: $white;
 			font-size: 2.4rem;
+
+			&--disabled {
+				opacity: 0.2;
+			}
 		}
 
 		&-copy-info {
@@ -71,6 +72,7 @@ body {
 			transform: translate(-90%, -50%);
 			color: $green;
 			text-transform: uppercase;
+			background-color: $dark-gray;
 
 			&--copied {
 				animation: animatedCopy 0.5s forwards;
@@ -81,7 +83,12 @@ body {
 			color: $green;
 			cursor: pointer;
 
-			&:hover {
+			&:focus {
+				outline: none;
+			}
+
+			&:hover,
+			&:focus {
 				color: $white;
 			}
 		}
@@ -124,7 +131,6 @@ body {
 					-webkit-appearance: none;
 					height: 2.8rem;
 					width: 2.8rem;
-					border: 2px solid transparent;
 					background: $white;
 					border-radius: 50%;
 					cursor: pointer;
@@ -178,13 +184,22 @@ body {
 					opacity: 0;
 				}
 
-				&:hover {
+				&:focus {
+					outline: none;
+				}
+
+				&:hover,
+				&:focus {
 					border: 2px solid $green;
 				}
 
 				&:checked {
 					background-color: $green;
 					border: 2px solid $green;
+
+					&:focus {
+						border: 2px solid $red;
+					}
 				}
 
 				&:checked::after {
@@ -237,7 +252,12 @@ body {
 			cursor: pointer;
 			transition: border 0.3s, background-color 0.3s, color 0.3s;
 
-			&:hover {
+			&:focus {
+				outline: none;
+			}
+
+			&:hover,
+			&:focus {
 				border: 2px solid $green;
 				background-color: transparent;
 				color: $green;
@@ -287,7 +307,15 @@ body {
 	}
 }
 
-@media (min-width: 375px) {
+@keyframes animatedCopy {
+	from {
+		top: -5%;
+		opacity: 0;
+	}
+	to {
+		top: 50%;
+		opacity: 1;
+	}
 }
 
 @media (min-width: 768px) {
@@ -307,7 +335,7 @@ body {
 
 			&-copy-info {
 				font-size: 1.8rem;
-				transform: translate(-120%, -50%);
+				transform: translate(-90%, -50%);
 			}
 
 			&-copy {
