@@ -31,6 +31,27 @@ body {
 	}
 }
 
+@mixin sliderThumb {
+	height: 2.8rem;
+	width: 2.8rem;
+	background: $white;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.2s, border 0.2s;
+
+	&:hover {
+		background-color: $main-bg;
+		border: 2px solid $green;
+	}
+}
+
+@mixin sliderTrack {
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	width: auto;
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -134,25 +155,20 @@ body {
 
 				&::-webkit-slider-thumb {
 					-webkit-appearance: none;
-					height: 2.8rem;
-					width: 2.8rem;
-					background: $white;
-					border-radius: 50%;
-					cursor: pointer;
-					transition: background-color 0.2s, border 0.2s;
+					@include sliderThumb;
+				}
 
-					&:hover {
-						background-color: $main-bg;
-						border: 2px solid $green;
-					}
+				&::-moz-range-thumb {
+					@include sliderThumb;
 				}
 
 				&::-webkit-slider-runnable-track {
 					-webkit-appearance: none;
-					box-shadow: none;
-					border: none;
-					background: transparent;
-					width: auto;
+					@include sliderTrack;
+				}
+
+				&::-moz-range-track {
+					@include sliderTrack;
 				}
 			}
 		}
