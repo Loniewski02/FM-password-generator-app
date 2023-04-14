@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Password generator app</title>
+  <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body>
+
+  <main class="main">
+    <div class="app">
+      <h2 class="app__heading">Password Generator</h2>
+      <div class="app__out">
+        <h2 class="app__out-pass">PTx1f5DaFX</h2>
+        <span class="app__out-copy-info">copied</span>
+        <img src="./dist/img/icons/icon-copy.svg" alt="" class="app__out-copy">
+      </div>
+
+      <div class="app__main">
+        <label for="length" class="app__main-length">Character Length<span
+            class="app__main-length-number">10</span></label>
+        <div class="app__main-range">
+          <input type="range" id="length">
+        </div>
+
+
+        <p class="app__main-option"><input type="checkbox">Include Uppercase Letters</p>
+        <p class="app__main-option"><input type="checkbox">Include Lowercase Letters</p>
+        <p class="app__main-option"><input type="checkbox">Include Numbers</p>
+        <p class="app__main-option"><input type="checkbox">Include Symbols</p>
+
+
+        <div class="app__main-strength">strength
+          <div class="app__main-strength-boxes">
+            <span class="app__main-strength-text">medium</span>
+            <div class="app__main-strength-box"></div>
+            <div class="app__main-strength-box"></div>
+            <div class="app__main-strength-box"></div>
+            <div class="app__main-strength-box"></div>
+          </div>
+        </div>
+
+        <button class="app__main-btn">generate <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
+          </svg></button>
+
+      </div>
+    </div>
+  </main>
+
+  Password Generator
+
+  P4$5W0rD!
+
+
+
+  Include Uppercase Letters
+  Include Lowercase Letters
+  Include Numbers
+  Include Symbols
+
+  Strength
+
+  Generate
+
+  <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>
