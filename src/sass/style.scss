@@ -61,12 +61,9 @@ body {
 .app {
 	position: relative;
 	min-width: 34.3rem;
+
 	&__heading {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translate(-50%, -200%);
-		width: max-content;
+		text-align: center;
 		color: $graylish-blue;
 		font-size: 1.6rem;
 	}
