@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/Loniewski02/FM-password-generator-app
-- Live Site URL: https://loniewski02.github.io/FM-password-generator-app/
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/html-sass-js-password-generator-qvaMrNhTV5)
+- Live Site URL: [live](https://loniewski02.github.io/FM-password-generator-app/)
 
 ## My process
 
